@@ -1,0 +1,38 @@
+{
+  "name": "support-triage-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "kb:setup": "tsx scripts/setup-knowledge-base.ts",
+    "test:chat": "tsx scripts/test-chat.ts",
+    "test:kb": "tsx --test scripts/knowledge-base.test.ts scripts/faq-answer.test.ts",
+    "evaluate:retrieval": "tsx scripts/evaluate-retrieval.ts",
+    "test:e2e": "node --conditions=react-server --import tsx scripts/evaluate-chat.ts"
+  },
+  "dependencies": {
+    "@dnotifier-realtime/dnotifier": "latest",
+    "@supabase/supabase-js": "^2.0.0",
+    "next": "^16.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@next/env": "^16.0.0",
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "dotenv": "^16.4.0",
+    "tailwindcss": "^4.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}
